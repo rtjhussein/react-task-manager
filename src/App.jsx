@@ -5,12 +5,6 @@ This is the ROOT component of the entire app.
 
 It stores the main "tasks state" so that multiple pages
 (Home and Tasks) can access the same data.
-
-Concepts used:
-- React Router
-- useState
-- useEffect
-- Passing props
 */
 
 import { useState, useEffect } from "react";
