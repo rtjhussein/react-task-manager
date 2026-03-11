@@ -34,7 +34,7 @@ export default function App() {
       text: taskText,
       completed: false,
     };
-    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setTasks((prevTasks) => [newTask, ...prevTasks]);
 
     toast.success("Task added!");
   };
