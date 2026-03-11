@@ -224,6 +224,26 @@ Whenever tasks change:
 
 ---
 
+## UI Design & Plugins
+
+This application was recently upgraded to feature a world-class **"Midnight Glassmorphism"** aesthetic. The design relies heavily on custom CSS variables, responsive flexbox layouts, and frosted glass effects (`backdrop-filter`) to create a sleek, modern dark-mode experience.
+
+To elevate the user experience, the following industry-standard plugins were integrated:
+
+### Framer Motion
+
+Used to implement fluid, physics-based animations. It handles buttery-smooth page transitions when navigating between routes, as well as dynamic layout animations (like items gracefully sliding in or shrinking away) when tasks are added or deleted from the list.
+
+### Lucide React
+
+Provides crisp, consistent SVG icons across the application. These icons (such as the checkmark logo, navigation icons, and the delete trash can) replace basic text and emojis, giving the interface a highly professional and polished look.
+
+### React Hot Toast
+
+Delivers custom-styled pop-up notifications (toasts) tailored to match the app's dark theme. These notifications provide immediate, satisfying visual feedback whenever a user successfully adds, completes, or deletes a task.
+
+---
+
 ## Installation
 
 1. Clone the repository
@@ -264,6 +284,9 @@ The application will run on:
 - Vite
 - HTML
 - CSS
+- Framer Motion (Animations)
+- Lucide React (Icons)
+- React Hot Toast (Notifications)
 
 ---
 
