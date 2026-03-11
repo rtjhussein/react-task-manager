@@ -229,7 +229,7 @@ Whenever tasks change:
 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/react-task-manager.git
+git clone https://github.com/rtjhussein/react-task-manager.git
 ```
 
 2. Navigate to the project folder
