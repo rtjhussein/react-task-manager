@@ -2,7 +2,7 @@
 
 ## Overview
 
-React Task Manager is a simple multi-page productivity application built with React. It allows users to create tasks, mark them as complete, delete tasks, and keep their tasks saved between page reloads using browser storage.
+This is a simple multi-page productivity application built with React. It allows users to create tasks, mark them as complete, delete tasks, and keep their tasks saved between page reloads using browser storage.
 
 This project was built as a learning exercise to demonstrate core React concepts including components, props, state management, hooks, event handling, and routing.
 
@@ -226,13 +226,13 @@ Whenever tasks change:
 
 ## UI Design & Plugins
 
-The app features a **"Midnight Glassmorphism"** aesthetic. The design relies heavily on custom CSS variables, responsive flexbox layouts, and frosted glass effects (`backdrop-filter`) to create a sleek, modern dark-mode experience.
+The app features a **"Midnight Glassmorphism"** aesthetic.
 
 The following plugins were integrated:
 
 ### Framer Motion
 
-Used to implement fluid, physics-based animations. It handles smooth page transitions when navigating between routes, as well as dynamic layout animations when tasks are added or deleted from the list.
+Used to implement fluid animations. It handles smooth page transitions when navigating between routes, as well as dynamic layout animations when tasks are added or deleted from the list.
 
 ### Lucide React
 
