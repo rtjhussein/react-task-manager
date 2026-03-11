@@ -9,7 +9,7 @@ It stores the main "tasks state" so that multiple pages
 
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster, toast } from "react-hot-toast"; // <-- 1. Import Toaster and toast
+import { Toaster, toast } from "react-hot-toast";
 import { Trash2 } from "lucide-react";
 
 import Navbar from "./components/Navbar";
@@ -36,7 +36,6 @@ export default function App() {
     };
     setTasks((prevTasks) => [...prevTasks, newTask]);
 
-    // <-- 2. Trigger success toast
     toast.success("Task added!");
   };
 
@@ -44,7 +43,6 @@ export default function App() {
   const deleteTask = (taskId) => {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
 
-    // <-- 3. Trigger generic or custom toast
     toast("Task deleted", {
       icon: <Trash2 size={16} />,
     });
@@ -56,7 +54,6 @@ export default function App() {
       const updatedTasks = prevTasks.map((task) => {
         if (task.id === taskId) {
           const isNowCompleted = !task.completed;
-          // <-- 4. Optional: Toast when a task is finished
           if (isNowCompleted)
             toast.success("Great job!", { id: "task-complete" });
           return { ...task, completed: isNowCompleted };
@@ -65,26 +62,23 @@ export default function App() {
       });
       return updatedTasks;
     });
-    if (isNowCompleted) toast.success("Great job!");
   };
 
   return (
     <BrowserRouter>
       <div className="app">
-        {/* <-- 5. Add the Toaster with custom Midnight Glass styling */}
         <Toaster
           position="bottom-right"
           toastOptions={{
             style: {
-              background:
-                "#1E2330" /* Slightly lighter than the main background */,
+              background: "#1E2330",
               color: "#FFFFFF",
               border: "1px solid rgba(255, 255, 255, 0.08)",
               backdropFilter: "blur(10px)",
             },
             success: {
               iconTheme: {
-                primary: "#6366F1" /* Your Indigo accent */,
+                primary: "#6366F1",
                 secondary: "#FFFFFF",
               },
             },
